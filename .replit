@@ -1,4 +1,4 @@
-compile = "./.config/build.sh"
+compile = "chmod +x ./.config/build.sh; ./.config/build.sh"
 run = "node --enable-source-maps .build/index.js"
 entrypoint = "index.ts"
 
