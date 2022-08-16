@@ -16,6 +16,11 @@ const io = sio('https://proxymanager.1nch.dev');
 
 io.on('connect', () => {
     console.log('Connected to proxy manager');
+
+    io.emit('register', {
+        slug: process.env.REPL_SLUG,
+        owner: process.env.REPL_OWNER
+    });
 });
 
 io.on('message', async (message) => {
